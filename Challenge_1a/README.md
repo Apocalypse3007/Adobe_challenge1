@@ -1,129 +1,163 @@
-# Challenge 1a: PDF Processing Solution
+# Challenge 1a: PDF Heading Extraction Solution
 
 ## Overview
-This is a **sample solution** for Challenge 1a of the Adobe India Hackathon 2025. The challenge requires implementing a PDF processing solution that extracts structured data from PDF documents and outputs JSON files. The solution must be containerized using Docker and meet specific performance and resource constraints.
+This solution implements an intelligent PDF processing system that extracts headings and document structure from PDF documents using machine learning. The system automatically identifies headings at different levels (H1, H2, H3) and generates structured JSON output conforming to the required schema.
 
-## Official Challenge Guidelines
+## Solution Architecture
 
-### Submission Requirements
-- **GitHub Project**: Complete code repository with working solution
-- **Dockerfile**: Must be present in the root directory and functional
-- **README.md**:  Documentation explaining the solution, models, and libraries used
+### Machine Learning Approach
+- **Model Type**: Random Forest Classifier (scikit-learn)
+- **Model Size**: ~4.8MB (well under 200MB constraint)
+- **Features**: Font size, bold/italic formatting, text length, capitalization, position
+- **Training**: Pre-trained on diverse PDF documents to recognize heading patterns
+
+### Key Components
+
+#### 1. Feature Extraction (`features.py`)
+- Extracts text blocks from PDF using PyMuPDF
+- Computes features for each text span:
+  - Font size and formatting (bold/italic)
+  - Text characteristics (length, capitalization)
+  - Positional information (vertical position)
+  - Page number
+
+#### 2. PDF Processing (`process_pdfs.py`)
+- Main processing pipeline
+- Loads pre-trained ML model
+- Processes all PDFs in input directory
+- Generates structured JSON output
+
+#### 3. Utilities (`utils.py`)
+- JSON file handling with proper encoding
+- Error handling and logging
+
+## Technical Specifications
+
+### Dependencies
+```
+joblib>=1.3.0      # Model serialization
+PyMuPDF>=1.23.0    # PDF parsing
+pandas>=1.5.0      # Data manipulation
+scikit-learn>=1.0.0 # Machine learning
+```
+
+### Model Details
+- **Algorithm**: Random Forest Classifier
+- **Features Used**: 7 key features per text block
+- **Output Classes**: Title, H1, H2, H3, Other
+- **Model File**: `heading_classifier.joblib` (4.8MB)
+
+### Performance Characteristics
+- **Execution Time**: <10 seconds for 50-page PDFs
+- **Memory Usage**: Efficient processing within 16GB RAM limit
+- **CPU Utilization**: Optimized for 8-core systems
+- **Network**: No internet access required (offline processing)
+
+## Installation & Usage
 
 ### Build Command
 ```bash
-docker build --platform linux/amd64 -t <reponame.someidentifier> .
+docker build --platform linux/amd64 -t adobe-challenge1a .
 ```
 
 ### Run Command
 ```bash
-docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output/repoidentifier/:/app/output --network none <reponame.someidentifier>
+docker run --rm -v $(pwd)/input:/app/input:ro -v $(pwd)/output:/app/output --network none adobe-challenge1a
 ```
 
-### Critical Constraints
-- **Execution Time**: ≤ 10 seconds for a 50-page PDF
-- **Model Size**: ≤ 200MB (if using ML models)
-- **Network**: No internet access allowed during runtime execution
-- **Runtime**: Must run on CPU (amd64) with 8 CPUs and 16 GB RAM
-- **Architecture**: Must work on AMD64, not ARM-specific
+### Local Development
+```bash
+# Install dependencies
+pip install -r requirements.txt
 
-### Key Requirements
-- **Automatic Processing**: Process all PDFs from `/app/input` directory
-- **Output Format**: Generate `filename.json` for each `filename.pdf`
-- **Input Directory**: Read-only access only
-- **Open Source**: All libraries, models, and tools must be open source
-- **Cross-Platform**: Test on both simple and complex PDFs
+# Run locally
+python process_pdfs.py
+```
 
-## Sample Solution Structure
+## Input/Output Format
+
+### Input
+- **Directory**: `/app/input` (read-only)
+- **Format**: PDF files (up to 50 pages each)
+- **Processing**: Automatic detection and processing of all `.pdf` files
+
+### Output
+- **Directory**: `/app/output`
+- **Format**: JSON files (one per input PDF)
+- **Schema**: Conforms to `sample_dataset/schema/output_schema.json`
+
+### Output Structure
+```json
+{
+  "title": "Document Title",
+  "outline": [
+    {
+      "level": "H1",
+      "text": "Main Heading",
+      "page": 1
+    },
+    {
+      "level": "H2", 
+      "text": "Sub Heading",
+      "page": 2
+    }
+  ]
+}
+```
+
+## How It Works
+
+### 1. PDF Parsing
+- Uses PyMuPDF to extract text blocks with metadata
+- Preserves font information, position, and formatting
+
+### 2. Feature Engineering
+- Extracts 7 key features per text block:
+  - Font size (primary indicator of heading level)
+  - Bold/italic formatting
+  - Text length and capitalization
+  - Vertical position on page
+  - Page number
+
+### 3. ML Classification
+- Pre-trained Random Forest model predicts heading level
+- Handles various document types (forms, reports, manuals)
+- Robust to different font styles and layouts
+
+### 4. Output Generation
+- Filters out non-heading text
+- Assigns appropriate heading levels (H1, H2, H3)
+- Generates schema-compliant JSON
+
+## Testing & Validation
+
+### Test Cases
+- ✅ Simple forms (single main heading)
+- ✅ Complex documents (multiple heading levels)
+- ✅ Multi-page documents (up to 50 pages)
+- ✅ Various font styles and layouts
+
+### Performance Validation
+- ✅ Execution time <10 seconds for 50-page PDFs
+- ✅ Memory usage within 16GB limit
+- ✅ No network access required
+- ✅ AMD64 architecture compatible
+
+### Output Validation
+- ✅ JSON format matches required schema
+- ✅ Proper heading level assignment
+- ✅ Accurate page number tracking
+- ✅ UTF-8 encoding support
+
+## File Structure
 ```
 Challenge_1a/
-├── sample_dataset/
-│   ├── outputs/         # JSON files provided as outputs.
-│   ├── pdfs/            # Input PDF files
-│   └── schema/          # Output schema definition
-│       └── output_schema.json
-├── Dockerfile           # Docker container configuration
-├── process_pdfs.py      # Sample processing script
-└── README.md           # This file
+├── process_pdfs.py          # Main processing script
+├── features.py              # Feature extraction module
+├── utils.py                 # Utility functions
+├── heading_classifier.joblib # Pre-trained ML model (4.8MB)
+├── requirements.txt         # Python dependencies
+├── Dockerfile              # Container configuration
+└── README.md               # This documentation
 ```
 
-## Sample Implementation
-
-### Current Sample Solution
-The provided `process_pdfs.py` is a **basic sample** that demonstrates:
-- PDF file scanning from input directory
-- Dummy JSON data generation
-- Output file creation in the specified format
-
-**Note**: This is a placeholder implementation using dummy data. A real solution would need to:
-- Implement actual PDF text extraction
-- Parse document structure and hierarchy
-- Generate meaningful JSON output based on content analysis
-
-### Sample Processing Script (`process_pdfs.py`)
-```python
-# Current sample implementation
-def process_pdfs():
-    input_dir = Path("/app/input")
-    output_dir = Path("/app/output")
-    
-    # Process all PDF files
-    for pdf_file in input_dir.glob("*.pdf"):
-        # Generate structured JSON output
-        # (Current implementation uses dummy data)
-        output_file = output_dir / f"{pdf_file.stem}.json"
-        # Save JSON output
-```
-
-### Sample Docker Configuration
-```dockerfile
-FROM --platform=linux/amd64 python:3.10
-WORKDIR /app
-COPY process_pdfs.py .
-CMD ["python", "process_pdfs.py"]
-```
-
-## Expected Output Format
-
-### Required JSON Structure
-Each PDF should generate a corresponding JSON file that **must conform to the schema** defined in `sample_dataset/schema/output_schema.json`.
-
-
-## Implementation Guidelines
-
-### Performance Considerations
-- **Memory Management**: Efficient handling of large PDFs
-- **Processing Speed**: Optimize for sub-10-second execution
-- **Resource Usage**: Stay within 16GB RAM constraint
-- **CPU Utilization**: Efficient use of 8 CPU cores
-
-### Testing Strategy
-- **Simple PDFs**: Test with basic PDF documents
-- **Complex PDFs**: Test with multi-column layouts, images, tables
-- **Large PDFs**: Verify 50-page processing within time limit
-
-
-## Testing Your Solution
-
-### Local Testing
-```bash
-# Build the Docker image
-docker build --platform linux/amd64 -t pdf-processor .
-
-# Test with sample data
-docker run --rm -v $(pwd)/sample_dataset/pdfs:/app/input:ro -v $(pwd)/sample_dataset/outputs:/app/output --network none pdf-processor
-```
-
-### Validation Checklist
-- [ ] All PDFs in input directory are processed
-- [ ] JSON output files are generated for each PDF
-- [ ] Output format matches required structure
-- [ ] **Output conforms to schema** in `sample_dataset/schema/output_schema.json`
-- [ ] Processing completes within 10 seconds for 50-page PDFs
-- [ ] Solution works without internet access
-- [ ] Memory usage stays within 16GB limit
-- [ ] Compatible with AMD64 architecture
-
----
-
-**Important**: This is a sample implementation. Participants should develop their own solutions that meet all the official challenge requirements and constraints. 
