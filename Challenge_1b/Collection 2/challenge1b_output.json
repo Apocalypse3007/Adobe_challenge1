@@ -1,83 +1,162 @@
 {
-    "metadata": {
-        "input_documents": [
-            "Learn Acrobat - Create and Convert_1.pdf",
-            "Learn Acrobat - Create and Convert_2.pdf",
-            "Learn Acrobat - Edit_1.pdf",
-            "Learn Acrobat - Edit_2.pdf",
-            "Learn Acrobat - Export_1.pdf",
-            "Learn Acrobat - Export_2.pdf",
-            "Learn Acrobat - Fill and Sign.pdf",
-            "Learn Acrobat - Generative AI_1.pdf",
-            "Learn Acrobat - Generative AI_2.pdf",
-            "Learn Acrobat - Request e-signatures_1.pdf",
-            "Learn Acrobat - Request e-signatures_2.pdf",
-            "Learn Acrobat - Share_1.pdf",
-            "Learn Acrobat - Share_2.pdf",
-            "Test Your Acrobat Exporting Skills.pdf",
-            "The Ultimate PDF Sharing Checklist.pdf"
-        ],
-        "persona": "HR professional",
-        "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
-        "processing_timestamp": "2025-07-10T15:34:33.350102"
-    },
-    "extracted_sections": [
-        {
-            "document": "Learn Acrobat - Fill and Sign.pdf",
-            "section_title": "Change flat forms to fillable (Acrobat Pro)",
-            "importance_rank": 1,
-            "page_number": 12
-        },
-        {
-            "document": "Learn Acrobat - Create and Convert_1.pdf",
-            "section_title": "Create multiple PDFs from multiple files",
-            "importance_rank": 2,
-            "page_number": 12
-        },
-        {
-            "document": "Learn Acrobat - Create and Convert_1.pdf",
-            "section_title": "Convert clipboard content to PDF",
-            "importance_rank": 3,
-            "page_number": 10
-        },
-        {
-            "document": "Learn Acrobat - Fill and Sign.pdf",
-            "section_title": "Fill and sign PDF forms",
-            "importance_rank": 4,
-            "page_number": 2
-        },
-        {
-            "document": "Learn Acrobat - Request e-signatures_1.pdf",
-            "section_title": "Send a document to get signatures from others",
-            "importance_rank": 5,
-            "page_number": 2
-        }
+  "metadata": {
+    "collection": "Collection 2",
+    "input_documents": [
+      "Learn Acrobat - Create and Convert_1.pdf",
+      "Learn Acrobat - Create and Convert_2.pdf",
+      "Learn Acrobat - Edit_1.pdf",
+      "Learn Acrobat - Edit_2.pdf",
+      "Learn Acrobat - Export_1.pdf",
+      "Learn Acrobat - Export_2.pdf",
+      "Learn Acrobat - Fill and Sign.pdf",
+      "Learn Acrobat - Generative AI_1.pdf",
+      "Learn Acrobat - Generative AI_2.pdf",
+      "Learn Acrobat - Request e-signatures_1.pdf",
+      "Learn Acrobat - Request e-signatures_2.pdf",
+      "Learn Acrobat - Share_1.pdf",
+      "Learn Acrobat - Share_2.pdf",
+      "Test Your Acrobat Exporting Skills.pdf",
+      "The Ultimate PDF Sharing Checklist.pdf"
     ],
-    "subsection_analysis": [
-        {
-            "document": "Learn Acrobat - Fill and Sign.pdf",
-            "refined_text": "To create an interactive form, use the Prepare Forms tool. See Create a form from an existing document.",
-            "page_number": 12
-        },
-        {
-            "document": "Learn Acrobat - Fill and Sign.pdf",
-            "refined_text": "To enable the Fill & Sign tools, from the hamburger menu (File menu in macOS) choose Save As Other > Acrobat Reader Extended PDF > Enable More Tools (includes Form Fill-in & Save). The tools are enabled for the current form only. When you create a different form, redo this task to enable Acrobat Reader users to use the tools.",
-            "page_number": 12
-        },
-        {
-            "document": "Learn Acrobat - Fill and Sign.pdf",
-            "refined_text": "Interactive forms contain fields that you can select and fill in. Flat forms do not have interactive fields. The Fill & Sign tool automatically detects the form fields like text fields, comb fields, checkboxes, and radio buttons. You can manually add text and other symbols anywhere on the form using the Fill & Sign tool if required.",
-            "page_number": 2
-        },
-        {
-            "document": "Learn Acrobat - Fill and Sign.pdf",
-            "refined_text": "To fill text fields: From the left panel, select Fill in form fields, and then select the field where you want to add text. It displays a text field along with a toolbar. Select the text field again and enter your text. To reposition the text box to align it with the text field, select the textbox and hover over it. Once you see a plus icon with arrows, move the textbox to the desired position. To edit the text, select the text box. Once you see the cursor and keypad, edit the text and then click elsewhere to enter. To change the text size, select A or A as required.",
-            "page_number": 2
-        },
-        {
-            "document": "Learn Acrobat - Request e-signatures_1.pdf",
-            "refined_text": "Open the PDF form in Acrobat or Acrobat Reader, and then choose All tools > Request E-signatures. Alternatively, you can select Sign from the top toolbar. The Request Signatures window is displayed. In the recipients field, add recipient email addresses in the order you want the document to be signed. The Mail and Message fields are just like the ones you use for sending an email and appear to your recipients in the same way. Change the default text in the Subject & Message area as appropriate.",
-            "page_number": 2
-        }
-    ]
+    "persona": "HR professional",
+    "job_to_be_done": "Create and manage fillable forms for onboarding and compliance.",
+    "processing_timestamp": "2025-07-28T20:12:55.002819"
+  },
+  "extracted_sections": [
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Types Of Pdf Forms",
+      "importance_rank": 1,
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Fill And Sign Pdf Forms",
+      "importance_rank": 2,
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Generative AI_2.pdf",
+      "section_title": "License Deployment",
+      "importance_rank": 3,
+      "page_number": 18
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Fill In Pdf Forms",
+      "importance_rank": 4,
+      "page_number": 8
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "section_title": "You Can Expedite The Signing Process And Optimize Your Results By Making The Following",
+      "importance_rank": 5,
+      "page_number": 24
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "section_title": "Type Your User Name And Password, Or Follow The Directions To Create An Account.",
+      "importance_rank": 6,
+      "page_number": 27
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "section_title": "Signer's Experience",
+      "importance_rank": 7,
+      "page_number": 8
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "section_title": "A Properly Signed Or Certified Pdf Portfolio Has One Or More Signatures That Approve Or Certify",
+      "importance_rank": 8,
+      "page_number": 9
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Fill And Sign Pdf Forms",
+      "importance_rank": 9,
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "section_title": "Adobe Livecycle Rights Management",
+      "importance_rank": 10,
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "section_title": "Interactive Form",
+      "importance_rank": 11,
+      "page_number": 12
+    },
+    {
+      "document": "Learn Acrobat - Generative AI_2.pdf",
+      "section_title": "Administer Ai Assistant For Enterprises",
+      "importance_rank": 12,
+      "page_number": 16
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "Interactive forms: These contain fields that you can select and fill in. The Fill & Sign tool automatically detects the form fields like text fields, comb fields, checkboxes, and radio buttons.",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "To complete and sign PDF forms, open the form in Acrobat and then select E-Sign from the global bar.",
+      "page_number": 2
+    },
+    {
+      "document": "Learn Acrobat - Generative AI_2.pdf",
+      "refined_text": "You can manage the deployment of Acrobat AI Assistant through the Adobe Admin Console.",
+      "page_number": 18
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "Is the form fillable?",
+      "page_number": 8
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "refined_text": "preparations in advance. See Create a self-signed digital ID. (See Create the signature appearance.)",
+      "page_number": 24
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "refined_text": "Select Next, and then select Finish. They can be stored on your computer in PKCS #12 file format. Register the digital ID in Acrobat for it to be available for use.",
+      "page_number": 27
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_1.pdf",
+      "refined_text": "A signer receives an email with a link to sign the agreement.",
+      "page_number": 8
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "refined_text": "the PDF Portfolio. To view details about the signature that appears on the Signature Badge, click the Signature Badge. Different warning icons appear for different situations.",
+      "page_number": 9
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "You can easily fill, sign, and share your documents using Acrobat's Fill & Sign tool. Types of PDF forms",
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Request e-signatures_2.pdf",
+      "refined_text": "(ALCRM) servers Adobe LiveCycleRights Management (ALCRM) servers let you define centralized policies to control access to documents.",
+      "page_number": 1
+    },
+    {
+      "document": "Learn Acrobat - Fill and Sign.pdf",
+      "refined_text": "To create an interactive form, use the Prepare Forms tool. See Create a form from an existing document.",
+      "page_number": 12
+    },
+    {
+      "document": "Learn Acrobat - Generative AI_2.pdf",
+      "refined_text": "Adobe's AI Assistant for enterprises extends generative AI features to Acrobat on the web, mobile, and desktop platforms. It provides centralized license management and enterprise- level technical support for adequate user support at scale.",
+      "page_number": 16
+    }
+  ],
+  "semantic_summary": "General Information:\n\n• Types Of Pdf Forms: Interactive forms: These contain fields that you can select and fill in. The Fill & Sign tool automatically detects the form fields like text fields, comb fields, checkboxes, and radio buttons.\n\n• Fill And Sign Pdf Forms: To complete and sign PDF forms, open the form in Acrobat and then select E-Sign from the global bar.\n\nGeneral Information:\n\n• License Deployment: You can manage the deployment of Acrobat AI Assistant through the Adobe Admin Console.\n\n• Administer Ai Assistant For Enterprises: Adobe's AI Assistant for enterprises extends generative AI features to Acrobat on the web, mobile, and desktop platforms. It provides centralized license management and enterprise- level technical support for adequate user support at scale.\n\nGeneral Information:\n\n• You Can Expedite The Signing Process And Optimize Your Results By Making The Following: preparations in advance. See Create a self-signed digital ID.\n\n• Type Your User Name And Password, Or Follow The Directions To Create An Account.: Select Next, and then select Finish. They can be stored on your computer in PKCS #12 file format.\n\nGeneral Information:\n\n• A Properly Signed Or Certified Pdf Portfolio Has One Or More Signatures That Approve Or Certify: the PDF Portfolio. To view details about the signature that appears on the Signature Badge, click the Signature Badge.\n\n• Adobe Livecycle Rights Management: (ALCRM) servers Adobe LiveCycleRights Management (ALCRM) servers let you define centralized policies to control access to documents."
 }

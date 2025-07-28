@@ -1,77 +1,156 @@
 {
-    "metadata": {
-        "input_documents": [
-            "Breakfast Ideas.pdf",
-            "Dinner Ideas - Mains_1.pdf",
-            "Dinner Ideas - Mains_2.pdf",
-            "Dinner Ideas - Mains_3.pdf",
-            "Dinner Ideas - Sides_1.pdf",
-            "Dinner Ideas - Sides_2.pdf",
-            "Dinner Ideas - Sides_3.pdf",
-            "Dinner Ideas - Sides_4.pdf",
-            "Lunch Ideas.pdf"
-        ],
-        "persona": "Food Contractor",
-        "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
-        "processing_timestamp": "2025-07-10T15:40:14.642503"
-    },
-    "extracted_sections": [
-        {
-            "document": "Dinner Ideas - Sides_2.pdf",
-            "section_title": "Falafel",
-            "importance_rank": 1,
-            "page_number": 7
-        },
-        {
-            "document": "Dinner Ideas - Sides_3.pdf",
-            "section_title": "Ratatouille",
-            "importance_rank": 2,
-            "page_number": 8
-        },
-        {
-            "document": "Dinner Ideas - Sides_1.pdf",
-            "section_title": "Baba Ganoush",
-            "importance_rank": 3,
-            "page_number": 4
-        },
-        {
-            "document": "Lunch Ideas.pdf",
-            "section_title": "Veggie Sushi Rolls",
-            "importance_rank": 4,
-            "page_number": 11
-        },
-        {
-            "document": "Dinner Ideas - Mains_2.pdf",
-            "section_title": "Vegetable Lasagna",
-            "importance_rank": 5,
-            "page_number": 9
-        }
+  "metadata": {
+    "collection": "Collection 3",
+    "input_documents": [
+      "Breakfast Ideas.pdf",
+      "Dinner Ideas - Mains_1.pdf",
+      "Dinner Ideas - Mains_2.pdf",
+      "Dinner Ideas - Mains_3.pdf",
+      "Dinner Ideas - Sides_1.pdf",
+      "Dinner Ideas - Sides_2.pdf",
+      "Dinner Ideas - Sides_3.pdf",
+      "Dinner Ideas - Sides_4.pdf",
+      "Lunch Ideas.pdf"
     ],
-    "subsection_analysis": [
-        {
-            "document": "Dinner Ideas - Sides_2.pdf",
-            "refined_text": "Escalivada Ingredients: 2 eggplants, 2 bell peppers, 2 tomatoes, 1 small onion, 1/4 cup olive oil, 1 teaspoon salt. Instructions: Preheat oven to 400°F (200°C). Roast eggplants, bell peppers, tomatoes, and onion until tender. Peel and slice vegetables. Arrange on a plate and drizzle with olive oil. Sprinkle with salt and serve warm or at room temperature.",
-            "page_number": 7
-        },
-        {
-            "document": "Dinner Ideas - Sides_2.pdf",
-            "refined_text": "Falafel Ingredients: 1 can chickpeas, 1 small onion, 2 cloves garlic, 1/4 cup parsley, 1 teaspoon cumin, 1 teaspoon coriander, 1 teaspoon salt, 1/4 cup flour, oil for frying. Instructions: Drain and rinse chickpeas. Blend chickpeas, diced onion, minced garlic, chopped parsley, cumin, coriander, and salt in a food processor. Add flour and mix until combined. Form mixture into balls and fry in hot oil until golden.",
-            "page_number": 7
-        },
-        {
-            "document": "Dinner Ideas - Sides_1.pdf",
-            "refined_text": "Baba Ganoush Ingredients: 2 eggplants, 1/4 cup tahini, 1/4 cup lemon juice, 2 cloves garlic, 1/4 cup olive oil, 1 teaspoon salt. Instructions: Roast eggplants until soft, then peel and mash. Blend mashed eggplant, tahini, lemon juice, minced garlic, and salt in a food processor. Slowly add olive oil while blending until smooth. Serve with a drizzle of olive oil.",
-            "page_number": 4
-        },
-        {
-            "document": "Lunch Ideas.pdf",
-            "refined_text": "Veggie Sushi Rolls Ingredients: 1 cup cooked sushi rice, 1/2 cucumber (julienned), 1/2 avocado (sliced), 1/4 cup carrot (julienned), 2 sheets nori (seaweed), soy sauce for dipping. Instructions: Lay a sheet of nori on a bamboo sushi mat. Spread a thin layer of sushi rice over the nori, leaving a 1-inch border at the top. Arrange the cucumber, avocado, and carrot in a line along the bottom edge of the rice. Roll the nori tightly using the bamboo mat. Slice into bite-sized pieces and serve with soy sauce.",
-            "page_number": 11
-        },
-        {
-            "document": "Dinner Ideas - Sides_3.pdf",
-            "refined_text": "Macaroni and Cheese Ingredients: 2 cups elbow macaroni, 2 cups milk, 2 tablespoons butter, 2 tablespoons flour, 2 cups shredded cheddar cheese, 1 teaspoon salt, 1/2 teaspoon pepper. Instructions: Cook macaroni according to package instructions, then drain. Melt butter in a saucepan, stir in flour to make a roux. Gradually add milk, stirring constantly until thickened. Add cheese, salt, and pepper, stir until melted. Combine cheese sauce with macaroni. Serve warm.",
-            "page_number": 8
-        }
-    ]
+    "persona": "Food Contractor",
+    "job_to_be_done": "Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+    "processing_timestamp": "2025-07-28T20:13:20.961706"
+  },
+  "extracted_sections": [
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "Chopped Parsley For Garnish",
+      "importance_rank": 1,
+      "page_number": 7
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "section_title": "Roll Up The Tortilla Tightly And Slice In Half.",
+      "importance_rank": 2,
+      "page_number": 15
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "section_title": "Shredded Lettuce, Diced Tomatoes, Shredded Cheese, Sour Cream, And Salsa For Toppings",
+      "importance_rank": 3,
+      "page_number": 8
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "section_title": "In A Small Bowl, Mix Soy Sauce, Beef Broth, Oyster Sauce, And Cornstarch.",
+      "importance_rank": 4,
+      "page_number": 7
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "section_title": "Shredded Lettuce, Diced Tomatoes, Shredded Cheese, Sour Cream, And Salsa For Toppings",
+      "importance_rank": 5,
+      "page_number": 5
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "In A Large Pot, Bring Chicken Broth, Soy Sauce, Miso Paste, Minced Garlic, And Sliced",
+      "importance_rank": 6,
+      "page_number": 2
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "section_title": "Chopped Parsley For Garnish",
+      "importance_rank": 7,
+      "page_number": 6
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "section_title": "In A Small Bowl, Mix Soy Sauce, Oyster Sauce, Sesame Oil, Cornstarch, And Water.",
+      "importance_rank": 8,
+      "page_number": 9
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "Cooked Couscous For Serving",
+      "importance_rank": 9,
+      "page_number": 7
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "section_title": "Shredded Cheese And Sour Cream For Garnish",
+      "importance_rank": 10,
+      "page_number": 5
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "section_title": "In A Bowl, Mix Yogurt, Lemon Juice, Minced Garlic, Grated Ginger, Cumin, Coriander,",
+      "importance_rank": 11,
+      "page_number": 9
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "section_title": "Black Bean And Corn Salad",
+      "importance_rank": 12,
+      "page_number": 7
+    }
+  ],
+  "subsection_analysis": [
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": " Cooked couscous for serving Instructions:  In a large pot, heat olive oil over medium heat.  Season with salt and pepper.  Sauté onion, garlic, and mushrooms until tender.",
+      "page_number": 7
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "refined_text": "Lentil and Veggie Wrap Ingredients: • 1 whole wheat tortilla • 1/2 cup cooked lentils • 1/4 cup bell pepper, sliced • 1/4 cup cucumber, diced • 1/4 cup shredded carrots • 1 tablespoon hummus Instructions: • Lay the tortilla flat and spread the hummus evenly.",
+      "page_number": 15
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "refined_text": "Instructions:  In a large skillet, heat vegetable oil over medium heat.",
+      "page_number": 8
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "refined_text": " In a large skillet, heat vegetable oil over medium heat.",
+      "page_number": 7
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "refined_text": "Instructions:  In a skillet, cook ground beef over medium heat until browned.",
+      "page_number": 5
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": "ginger to a boil.  Cook ramen noodles according to package instructions.",
+      "page_number": 2
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "refined_text": "Instructions:  Cook fettuccine according to package instructions.  Add chicken breasts and cook until golden and cooked through.",
+      "page_number": 6
+    },
+    {
+      "document": "Dinner Ideas - Mains_2.pdf",
+      "refined_text": " In a large skillet, heat sesame oil over medium heat.",
+      "page_number": 9
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": "Instructions:  In a large pot, heat olive oil over medium heat.  Stir in cumin, cinnamon, and turmeric, then add chicken broth, apricots, and olives.",
+      "page_number": 7
+    },
+    {
+      "document": "Dinner Ideas - Mains_3.pdf",
+      "refined_text": "Instructions:  In a large pot, cook ground beef with diced onion and garlic over medium heat until browned.",
+      "page_number": 5
+    },
+    {
+      "document": "Dinner Ideas - Mains_1.pdf",
+      "refined_text": "turmeric, paprika, and garam masala.  Add marinated chicken and cook until browned.  Garnish with chopped cilantro and serve.",
+      "page_number": 9
+    },
+    {
+      "document": "Lunch Ideas.pdf",
+      "refined_text": "Ingredients: • 1 can black beans, drained and rinsed • 1 cup corn kernels (fresh or canned) • 1/2 cup cherry tomatoes, halved",
+      "page_number": 7
+    }
+  ],
+  "semantic_summary": "Primary Content:\n\n• Chopped Parsley For Garnish:  Cooked couscous for serving Instructions:  In a large pot, heat olive oil over medium heat.  Season with salt and pepper.\n\n• In A Large Pot, Bring Chicken Broth, Soy Sauce, Miso Paste, Minced Garlic, And Sliced: ginger to a boil.  Cook ramen noodles according to package instructions.\n\nMeal Options:\n\n• Roll Up The Tortilla Tightly And Slice In Half.: Lentil and Veggie Wrap Ingredients: • 1 whole wheat tortilla • 1/2 cup cooked lentils • 1/4 cup bell pepper, sliced • 1/4 cup cucumber, diced • 1/4 cup shredded carrots • 1 tablespoon hummus Instructions: • Lay the tortilla flat and spread the hummus evenly.\n\n• Black Bean And Corn Salad: Ingredients: • 1 can black beans, drained and rinsed • 1 cup corn kernels (fresh or canned) • 1/2 cup cherry tomatoes, halved\n\nPrimary Content:\n\n• Shredded Lettuce, Diced Tomatoes, Shredded Cheese, Sour Cream, And Salsa For Toppings: Instructions:  In a large skillet, heat vegetable oil over medium heat.\n\n• In A Small Bowl, Mix Soy Sauce, Beef Broth, Oyster Sauce, And Cornstarch.:  In a large skillet, heat vegetable oil over medium heat.\n\nPrimary Content:\n\n• Shredded Lettuce, Diced Tomatoes, Shredded Cheese, Sour Cream, And Salsa For Toppings: Instructions:  In a skillet, cook ground beef over medium heat until browned.\n\n• Chopped Parsley For Garnish: Instructions:  Cook fettuccine according to package instructions.  Add chicken breasts and cook until golden and cooked through."
 }
